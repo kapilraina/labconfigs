@@ -14,7 +14,7 @@ spring:
       enabled: false
       path: /h2 
   datasource:
-    url: jdbc:mysql://localhost:3306/db_mysql_default?useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://db:3306/db_mysql_default?useSSL=false&allowPublicKeyRetrieval=true
     username: ${productms.mysql.user:user}
     password: ${productms.mysql.password:password}
     driver-class-name: com.mysql.jdbc.Driver
@@ -42,7 +42,7 @@ eureka:
     fetchRegistry: true
     prefer-same-zone-eureka: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka:8761/eureka
 
 feign:
   hystrix:
