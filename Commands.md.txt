@@ -27,3 +27,44 @@ docker-compose down
 docker network ls
 docker inspect network e9c7008c8272
 
+
+
+How did we come to microservices - History & Driving Forces? 	Cloud
+	Agile
+	Complexity of Operating Environment
+	Customer Expectations
+	DevOps
+Define Microservices	Definition
+	Characteristics
+	Benefits
+	Complexities
+Spring Boot	Basics
+	MVC
+	REST
+	Repositories
+Case-Study	Domain
+	Services
+	Expectations
+Microservices Patterns	Externalized Configuration 
+	Service Registry
+	Service Discovery
+	Client Side Load Balancing
+	Server Side Load Balancing
+	Service Proxy
+	API Gateway
+	BFF
+	Service Mesh(ISTIO)
+	Obervability By Design (Actuator)
+	Circuit Breaker
+	Retry
+	Bulk Heads
+	Tracing
+	Consumer Driven Contracts(Contract Testing)
+Integration	RPC
+	API(REST)
+Cloud	Virtualization
+	Being Cloud Native
+	Containers (Docker)
+	Orchestration and Clustering (K8S)
+
+
