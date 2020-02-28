@@ -15,7 +15,7 @@ discountms.eureka.instance.leaseExpirationDurationInSeconds: 5
 discountms.eureka.client.registerWithEureka: true
 discountms.eureka.client.fetchRegistry: true
 discountms.eureka.client.prefer-same-zone-eureka: true
-discountms.eureka.client.service-registry-url: http://localhost:8761/eureka
+discountms.eureka.client.service-registry-url: http://eureka:8761/eureka
 discountms.hystrix.metrics.polling-interval-ms: 3000
 
 discountdata.discountmap.FURNISHING: 75.0
