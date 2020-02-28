@@ -1,0 +1,29 @@
+docker ps // Display running containers
+docker ps -a // Display all containers
+docker container prune // Delete stopped containers
+docker pull nginx:latest // Pull image with the given tag
+docker run --name mynginx -p 80:80 -d nginx:latest //Run image as container in daemon mode with ports mapped
+docker container stop <container_id> // Obvious
+docker container rm <container_id> // Obvious
+docker exec -it <container_id> /bin/sh
+
+docker run --name tomcatlocal -p 9090:8080 -d tomcat:latest
+Run as http://localhost:9090/
+
+docker run --name tomcatlocal854 -p 9092:8080 -d tomcat:8.5.46
+Run as http://localhost:9092
+
+docker build -t kapilshekharraina/eurekaserverlab:1 .
+
+docker run --name eurekaserverlab -p 8761:8761 -d kapilshekharraina/eurekaserverlab:1
+
+docker push kapilshekharraina/eurekaserverlab:1
+
+https://docs.docker.com/engine/reference/builder/
+
+docker-compose up -d
+docker-compose down
+
+docker network ls
+docker inspect network e9c7008c8272
+
