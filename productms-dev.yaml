@@ -25,6 +25,9 @@ spring:
         enable_lazy_load_no_trans: true
         show_sql: ${mysql.secure.mysql_show_sql:false}
         ddl-auto: none 
+  rabbitmq:
+    host: ${productms.bus.rabbitmq.host:rabbitmq-master}
+    port: ${productms.bus.rabbitmq.port:5672}
 
 server:
   port: 8081
