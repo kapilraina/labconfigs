@@ -18,7 +18,7 @@ discountms.eureka.client.prefer-same-zone-eureka: true
 discountms.eureka.client.service-registry-url: http://eureka:8761/eureka
 discountms.hystrix.metrics.polling-interval-ms: 3000
 
-discountdata.discountmap.FURNISHING: 75.0
+discountdata.discountmap.FURNISHING: 15.35
 discountdata.discountmap.KITCHENELECTRONIC: 13.0
 discountdata.discountmap.MEDICALEQUIPMENT: 7.0
 discountdata.discountmap.MOBILEPHONE: 5.0
