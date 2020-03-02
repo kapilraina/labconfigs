@@ -55,7 +55,7 @@ feign:
     config:
       feignName:
         connectTimeout: ${productms.feign.hystrix.connectTimeout:5000}
-        readTimeout: ${productms.feign.hystrix.readTimeout:4008}
+        readTimeout: ${productms.feign.hystrix.readTimeout:4009}
         
 management:
   endpoints:
