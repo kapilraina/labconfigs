@@ -34,7 +34,7 @@ spring:
              stream:
               kafka:
                binder:
-                  brokers: kafka:9094,kafka:9095
+                  brokers: kafka1:9094,kafka2:9095
                   defaultBrokerPort: 9094
                   autoCreateTopics: true
                   autoAddPartitions: true
