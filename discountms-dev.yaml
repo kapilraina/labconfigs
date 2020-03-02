@@ -44,9 +44,9 @@ spring:
                   minPartitionCount:  2
                   replicationFactor: 1         
       default-binder: rabbit-binder
-    #bus:
-    # trace: 
-    #  enabled: ${discountms.bus.trace:true}
+    bus:
+     trace: 
+      enabled: ${discountms.bus.trace:true}
     # destination: ${discountms.bus.destination:busXchange}   
 logging:
   pattern: 
@@ -69,7 +69,7 @@ discountms.eureka.client.service-registry-url: http://eureka:8761/eureka
 discountms.hystrix.metrics.polling-interval-ms: 3000
 
 discountdata.discountmap.FURNISHING: 15.35
-discountdata.discountmap.KITCHENELECTRONIC: 17.99
+discountdata.discountmap.KITCHENELECTRONIC: 19.99
 discountdata.discountmap.MEDICALEQUIPMENT: 7.0
 discountdata.discountmap.MOBILEPHONE: 5.0
 discountdata.discountmap.MUSICINSTRUMENT: 9.0
