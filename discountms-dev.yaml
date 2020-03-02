@@ -1,4 +1,7 @@
 spring:
+  rabbitmq:
+    host: ${productms.bus.rabbitmq.host:rabbitmq-master}
+    port: ${productms.bus.rabbitmq.port:5672}
   cloud:
     stream:
       bindings:
