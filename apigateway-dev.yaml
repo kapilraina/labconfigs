@@ -8,6 +8,9 @@ spring:
       probability: 1.0
   zipkin:
     base-url: http://zipkin:9411/
+  rabbitmq:
+    host: ${apigateway.bus.rabbitmq.host:rabbitmq-master}
+    port: ${apigateway.bus.rabbitmq.port:5672}
   cloud:
     gateway:
       metrics:
