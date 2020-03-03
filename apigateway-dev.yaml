@@ -62,7 +62,7 @@ spring:
         predicates:
         - Path=/minion/**
         #- RewritePath=/product/(?<message>.*), /$\{message}
-      - id: discountmsactuator
+      - id: discountmsactuatorid
         uri: lb://discountms
         predicates:
         - Path=/discountms/actuator/**
