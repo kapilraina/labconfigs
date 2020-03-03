@@ -65,8 +65,9 @@ spring:
       - id: discountmsactuatorid
         uri: lb://discountms
         predicates:
-        - Path=/discountms/actuator/**
-         - RewritePath=/discountms/(?<message>.*), /$\{message}
+          - Path=/discountms/actuator/**
+        filters:
+         - RewritePath=/discountms/actuator/(?<message>.*), /actuator/$\{message}
 eureka:
   instance:
     instanceId: ${spring.application.name}:${random.int}
