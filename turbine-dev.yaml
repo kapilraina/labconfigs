@@ -1,0 +1,30 @@
+server:
+  port: 9093
+  
+turbine:
+  appConfig: service-client,spring-cloud-ribbon,productms,discountms
+  clusterNameExpression: new String("default")
+  #aggregator:
+  #  clusterConfig: SERVICE-CLIENT,SPRING-CLOUD-RIBBON
+  
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${random.int}
+    leaseRenewalIntervalInSeconds: 2      #Resync interval
+    leaseExpirationDurationInSeconds: 5   #Eureka Expire time
+    preferIpAddress: true
+    metadata-map:
+      zone: zone_8761
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    prefer-same-zone-eureka: true
+    serviceUrl:
+      defaultZone: http://host.docker.internal:8761/eureka
+logging:
+  level:
+    root: ${turbine.logging.level.root:ERROR}
+    org.springframework.web: ${turbine.logging.level.web:ERROR}
+    org.springframework.web.HttpLogging: ${turbine.logging.level.http:ERROR}
+
+turbine.management.port: 8855
