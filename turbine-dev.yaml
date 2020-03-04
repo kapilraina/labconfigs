@@ -20,7 +20,7 @@ eureka:
     fetchRegistry: true
     prefer-same-zone-eureka: true
     serviceUrl:
-      defaultZone: http://host.docker.internal:8761/eureka
+      defaultZone: http://eurekaA:8761/eureka
 logging:
   level:
     root: ${turbine.logging.level.root:ERROR}
