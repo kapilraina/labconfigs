@@ -1,67 +1,12 @@
-spring:
-  mvc:
-    view:
-      prefix: /
-      suffix: .html
-  sleuth:
-    trace-id128: true
-    sampler:
-      probability: 1.0
-  zipkin:
-    enabled: true
-    base-url: http://zipkin:9411/
-  h2:
-    console:
-      enabled: false
-      path: /h2 
-  datasource:
-    url: jdbc:mysql://db:3306/db_mysql_default?useSSL=false&allowPublicKeyRetrieval=true
-    username: ${productms.mysql.user:user}
-    password: ${productms.mysql.password:password}
-    driver-class-name: com.mysql.jdbc.Driver
-  jpa: 
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
-        enable_lazy_load_no_trans: true
-        show_sql: ${mysql.secure.mysql_show_sql:false}
-        ddl-auto: none 
-  rabbitmq:
-    host: ${productms.bus.rabbitmq.host:rabbitmq-master}
-    port: ${productms.bus.rabbitmq.port:5672}
+productms.console.enabled: true
+productms.console.path: /h2
+productms.datasource.url: jdbc:h2:mem:productDb;DB_CLOSE_DELAY=-1
+productms.datasource.username: sa
+productms.datasource.password:
+productms.datasource.driver: org.h2.Driver
 
-server:
-  port: 8081
 
-eureka:
-  instance:
-    instanceId: ${spring.application.name}:${random.int}
-    leaseRenewalIntervalInSeconds: 2
-    leaseExpirationDurationInSeconds: 5
-    preferIpAddress: true
-    metadata-map:
-      zone: A
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    prefer-same-zone-eureka: true
-    serviceUrl:
-      defaultZone: http://eureka:8761/eureka
+productms.eureka.url: http://eureka:8761/eureka
+zipkin.url: http://zipkin:9411/
 
-feign:
-  hystrix:
-    enabled: true
-  client:
-    config:
-      feignName:
-        connectTimeout: ${productms.feign.hystrix.connectTimeout:5000}
-        readTimeout: ${productms.feign.hystrix.readTimeout:4009}
-        
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
+message: From dev profile under product microservice 
